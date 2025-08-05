@@ -1,1 +1,47 @@
-<p>about-me works!</p>
+ <section id="about" class="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p class="about-intro">{{ aboutIntro }}</p>
+            <p class="about-details">{{ aboutDetails }}</p>
+            
+            <div class="skills-section">
+              <h3>Technical Skills</h3>
+              <div class="skills-grid">
+                <div *ngFor="let skill of skills" class="skill-item">
+                  <div class="skill-header">
+                    <span class="skill-name">{{ skill.name }}</span>
+                    <span class="skill-percentage">{{ skill.level }}%</span>
+                  </div>
+                  <div class="skill-bar">
+                    <div class="skill-progress" [style.width.%]="skill.level"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience-section">
+              <h3>Experience</h3>
+              <div class="timeline">
+                <div *ngFor="let exp of experience" class="timeline-item">
+                  <div class="timeline-date">{{ exp.year }}</div>
+                  <div class="timeline-content">
+                    <h4>{{ exp.position }}</h4>
+                    <p class="company">{{ exp.company }}</p>
+                    <p class="description">{{ exp.description }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="about-stats">
+            <div class="stat-card" *ngFor="let stat of stats">
+              <div class="stat-number">{{ stat.number }}</div>
+              <div class="stat-label">{{ stat.label }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>

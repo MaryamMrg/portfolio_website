@@ -7,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrl: './header.css'
 })
 export class Header {
+name = 'Maryam El Ouadaa';
+  isMenuOpen = false;
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu() {
+    this.isMenuOpen = false;
+  }
 }

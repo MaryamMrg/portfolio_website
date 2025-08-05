@@ -1,0 +1,8 @@
+ .app-container {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #c1e8ef 0%, #253e4e 100%);
+    }
+    
+    main {
+      padding-top: 70px; 
+    }

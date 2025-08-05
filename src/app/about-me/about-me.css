@@ -1,0 +1,241 @@
+ .about {
+      padding: 5rem 0;
+      background: white;
+      position: relative;
+    }
+
+    .about::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(180deg, #5bbbc7, transparent);
+      opacity: 0.1;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 4rem;
+      color: #333;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(135deg, #c1e8ef 0%, #253e4e 100%);
+      border-radius: 2px;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .about-intro {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #555;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .about-details {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    .skills-section, .experience-section {
+      margin-bottom: 3rem;
+    }
+
+    .skills-section h3, .experience-section h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 2rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .skills-section h3::before, .experience-section h3::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 20px;
+      background: linear-gradient(135deg, #c1e8ef 0%, #253e4e 100%);
+      border-radius: 2px;
+    }
+
+    .skills-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .skill-item {
+      background: #f8f9fa;
+      padding: 1.5rem;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .skill-name {
+      font-weight: 600;
+      color: #333;
+    }
+
+    .skill-percentage {
+      font-weight: 600;
+      color: #667eea;
+    }
+
+    .skill-bar {
+      height: 8px;
+      background: #e9ecef;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      height: 100%;
+      background: linear-gradient(135deg, #c1e8ef 0%, #253e4e 100%);
+      border-radius: 4px;
+      transition: width 1s ease-in-out;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(135deg, #c1e8ef 0%, #253e4e 100%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 2rem;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 5px;
+      width: 12px;
+      height: 12px;
+      background: #667eea;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px #667eea;
+    }
+
+    .timeline-date {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-content h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .company {
+      font-style: italic;
+      color: #666;
+      margin-bottom: 0.5rem;
+    }
+
+    .description {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .about-stats {
+      display: grid;
+      gap: 2rem;
+    }
+
+    .stat-card {
+      background: linear-gradient(135deg, #c1e8ef 0%, #253e4e 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .about-intro {
+        font-size: 1.2rem;
+      }
+    }
