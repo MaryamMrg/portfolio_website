@@ -102,19 +102,18 @@
       animation: fadeInRight 1s ease-out;
     }
 
-    .image-placeholder {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(10px);
-      border: 3px solid rgba(255, 255, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
+ .image-placeholder {
+  background-image: url('../asset/IMG-20250516-WA0009[1].jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; 
+   margin-top: 50px; /* This makes it circular */
+}
+
+.placeholder-content {
+  display: none; /* Hide the "Your Photo" text */
+}
 
     .image-placeholder::before {
       content: '';
